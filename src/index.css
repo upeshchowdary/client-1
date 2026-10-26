@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-malayalam: 'Anek Malayalam', sans-serif;
+
+    /* Theme colors sampled from official brand logo & heritage */
+    --color-brand-green-dark: #123824;
+    --color-brand-green-leaf: #2E7D32;
+    --color-brand-green-emerald: #1B5E20;
+    --color-brand-gold: #D99B00;
+    --color-brand-gold-warm: #FDB813;
+    --color-brand-cream: #FAF8F5;
+    --color-brand-chili: #B71C1C;
+    --color-brand-charcoal: #1A1917;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8F5;
+    color: #1A1917;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-malayalam {
+    font-family: var(--font-malayalam);
+  }
+}
+
+/* Custom Utilities for Premium Look */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(234, 228, 220, 0.7);
+}
+
+.glass-dark {
+  background: rgba(18, 56, 36, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFEA;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E7D32;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1B5E20;
+}
